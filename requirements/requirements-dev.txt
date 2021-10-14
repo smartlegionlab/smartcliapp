@@ -1,0 +1,5 @@
+click
+pytest
+pytest-cov
+tox
+build
