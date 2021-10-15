@@ -10,6 +10,14 @@ class ActionMan:
 
     @classmethod
     def get_action(cls, title: str) -> bool:
+        """
+        Get Action
+
+        - Yes, No , Exit
+
+        :param title: Title string
+        :return: <bool> - yes/no True/False
+        """
         while 1:
             cls.printer.default.echo(f'{title} [y/n/e]: ')
             char = click.getchar()
@@ -25,17 +33,31 @@ class ActionMan:
 class LaunchMan:
     @classmethod
     def launch(cls, url):
+        """
+        Launch the default browser to follow the specified link.
+
+        :param url: <str> url;
+        :return: None;
+        """
         click.launch(url)
 
 
 class InputMan:
     @classmethod
     def input(cls, title):
+        """Default input"""
         return input(f'{title}: ')
 
     @classmethod
-    def prompt(cls, title):
-        return click.prompt(title)
+    def prompt(cls, title, hide_input=False):
+        """
+        Click input.
+
+        :param title: <str> title;
+        :param hide_input: <bool> - hidden input. y/n True/False
+        :return:
+        """
+        return click.prompt(title, hide_input=hide_input)
 
 
 class StatusMan:
@@ -43,6 +65,13 @@ class StatusMan:
 
     @classmethod
     def show_status(cls, status, show=True):
+        """
+        Status output.
+
+        :param status: <bool> - True/False;
+        :param show: <bool> - Print to Console/Do Not Print;
+        :return: <str> status message;
+        """
         msg = 'Ok!' if status else 'Error!'
         if show:
             cls.printer.default.echo(msg)
@@ -50,6 +79,7 @@ class StatusMan:
 
 
 class ClickMan:
+    """A versatile manager"""
     printer = Printer()
     input_man = InputMan()
     status_man = StatusMan()
