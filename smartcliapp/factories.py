@@ -1,4 +1,12 @@
+# -*- coding: utf-8 -*-
+# --------------------------------------------------------
+# Licensed under the terms of the BSD 3-Clause License
+# (see LICENSE for details).
+# Copyright © 2018-2021, A.A Suvorov
+# All rights reserved.
+# --------------------------------------------------------
 from smartcliapp.informers import Informer
+
 from smartcliapp.managers import (
     ActionMan,
     LaunchMan,
@@ -6,7 +14,36 @@ from smartcliapp.managers import (
     StatusMan,
     ClickMan
 )
-from smartcliapp.printers import Printer
+
+from smartcliapp.printers import (
+    BasePrinter,
+    ClickPrinter,
+    SmartPrinter,
+    PagerPrinter,
+    Printer
+)
+
+
+class PrintersFactory:
+    """Printers factory"""
+
+    @classmethod
+    def get_base(cls):
+        """Get base printer"""
+        return BasePrinter()
+
+    @classmethod
+    def get_click(cls):
+        """Get click printer"""
+        return ClickPrinter()
+
+    @classmethod
+    def get_smart(cls):
+        return SmartPrinter()
+
+    @classmethod
+    def get_pager(cls):
+        return PagerPrinter()
 
 
 class Factory:

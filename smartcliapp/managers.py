@@ -1,8 +1,23 @@
+# -*- coding: utf-8 -*-
+# --------------------------------------------------------
+# Licensed under the terms of the BSD 3-Clause License
+# (see LICENSE for details).
+# Copyright © 2018-2021, A.A Suvorov
+# All rights reserved.
+# --------------------------------------------------------
 import sys
 
 import click
 
 from smartcliapp.printers import Printer
+
+
+class ContinueMan:
+    @classmethod
+    def to_continue(cls, msg=None):
+        if msg is None:
+            msg = 'Enter to continue...'
+        return input(msg)
 
 
 class ActionMan:
@@ -19,14 +34,14 @@ class ActionMan:
         :return: <bool> - yes/no True/False
         """
         while 1:
-            cls.printer.default.echo(f'{title} [y/n/e]: ')
+            cls.printer.base.echo(f'{title} [y/n/e]: ')
             char = click.getchar()
 
-            if char.lower() in ('y', ):
+            if char.lower() in ('y', 'н', ):
                 return True
-            elif char.lower() in ('n',):
+            elif char.lower() in ('n', 'т', ):
                 return False
-            elif char.lower() in ('e', ):
+            elif char.lower() in ('e', 'у'):
                 sys.exit(0)
 
 
@@ -74,7 +89,7 @@ class StatusMan:
         """
         msg = 'Ok!' if status else 'Error!'
         if show:
-            cls.printer.default.echo(msg)
+            cls.printer.base.echo(msg)
         return msg
 
 
@@ -84,4 +99,5 @@ class ClickMan:
     input_man = InputMan()
     status_man = StatusMan()
     action_man = ActionMan()
-    launcher = LaunchMan()
+    launch_man = LaunchMan()
+    continue_man = ContinueMan()

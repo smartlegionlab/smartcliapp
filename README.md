@@ -12,7 +12,11 @@
 ***
 
 ## Short Description:
+
 ___smartcliapp___ - Cross-platform library of tools for creating console applications, based on the click library.
+
+- One example is the console utility : [github-ssh-key](https://github.com/smartlegionlab/github-ssh-key)
+
 ***
 
 Author and developer: ___A.A Suvorov___
@@ -40,9 +44,16 @@ Author and developer: ___A.A Suvorov___
 
 ## What's new?
 
+___smartcliapp v0.2.0___
+
 - New opportunities.
 - Clearer description.
 - A more informative example.
+
+## Warning!
+
+The package is under active development, so new versions
+may not be compatible with the old ones.
 
 ***
 
@@ -180,7 +191,7 @@ def cli():
     # We use an action request in our application, an exit, a message display, or an immediate exit.
     action = ClickMan.action_man.get_action('Do you want to continue?')
     if action:
-        ClickMan.printer.default.echo('Hello World!)')
+        ClickMan.printer.base.echo('Hello World!)')
     
     CLiManager.show_footer()
 
@@ -246,7 +257,7 @@ def cli(ctx):
         # We use an action request in our application, an exit, a message display, or an immediate exit.
         action = ClickMan.action_man.get_action('Do you want to continue?')
         if action:
-            ClickMan.printer.default.echo('Hello World!)')
+            ClickMan.printer.base.echo('Hello World!)')
     
         CLiManager.show_footer()
 
@@ -334,7 +345,7 @@ def cli(ctx):
         # We use an action request in our application, an exit, a message display, or an immediate exit.
         action = ClickMan.action_man.get_action('Do you want to continue?')
         if action:
-            ClickMan.printer.default.echo('Hello World!)')
+            ClickMan.printer.base.echo('Hello World!)')
     
         CLiManager.show_footer()
 
@@ -367,7 +378,7 @@ def area(width, height):
 @cli.result_callback()
 def process_result(result):
     if result is not None:
-        CLiManager.printer.default.echo(f'Show result in process_result: {result}')
+        CLiManager.printer.base.echo(f'Show result in process_result: {result}')
         CLiManager.show_footer()
 
 

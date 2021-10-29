@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # --------------------------------------------------------
 # Licensed under the terms of the BSD 3-Clause License
@@ -21,7 +22,7 @@ class CommandMan:
 
     @classmethod
     def open_url(cls, url):
-        ClickMan.launcher.launch(url)
+        ClickMan.launch_man.launch(url)
         return url
 
 
@@ -36,7 +37,7 @@ class CLiManager(Informer):
     description = 'Tools for creating console applications'
     copyright = 'Copyright © 2018-2021, A.A Suvorov'
     url = 'https://github.com/smartlegionlab'
-    version = '0.1.1'
+    version = '0.2.0'
 
 
 @click.group(context_settings={'help_option_names': ['-h', '--help']}, invoke_without_command=True)
@@ -48,7 +49,7 @@ def cli(ctx):
         # We use an action request in our application, an exit, a message display, or an immediate exit.
         action = ClickMan.action_man.get_action('Do you want to continue?')
         if action:
-            ClickMan.printer.default.echo('Hello World!)')
+            ClickMan.printer.base.echo('Hello World!)')
 
         CLiManager.show_footer()
 
@@ -59,7 +60,7 @@ def open_url():
     # We use the class inherited from Informer to launch the browser with our url
     url = CLiManager.url
     msg = f'Open url: {url}'
-    CLiManager.command_man.open_url(url)
+    CLiManager.click_man.launch_man.launch(CLiManager.url)
     return msg
 
 
@@ -80,7 +81,7 @@ def area(width, height):
 @cli.result_callback()
 def process_result(result):
     if result is not None:
-        CLiManager.printer.default.echo(f'Result: {result}')
+        CLiManager.printer.base.echo(f'Result: {result}')
         CLiManager.show_footer()
 
 
