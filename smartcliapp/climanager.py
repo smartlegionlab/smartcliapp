@@ -4,27 +4,27 @@
 # (see LICENSE for details).
 # Copyright © 2018-2021, A.A Suvorov
 # All rights reserved.
-# --------------------------------------------------------
 import sys
 
 import click
+from smartprinter.printers import Printer
 
-from smartcliapp.printers import Printer
 
+class CliManager:
 
-class ContinueMan:
-    @classmethod
-    def to_continue(cls, msg=None):
+    def __init__(self):
+        self.printer = Printer()
+
+    def to_continue(self, msg=None):
         if msg is None:
             msg = 'Enter to continue...'
+        return self.input(msg)
+
+    @staticmethod
+    def input(msg):
         return input(msg)
 
-
-class ActionMan:
-    printer = Printer()
-
-    @classmethod
-    def get_action(cls, title: str) -> bool:
+    def get_action(self, title: str) -> bool:
         """
         Get Action
 
@@ -34,20 +34,18 @@ class ActionMan:
         :return: <bool> - yes/no True/False
         """
         while 1:
-            cls.printer.base.echo(f'{title} [y/n/e]: ')
+            self.printer.base.echo(f'{title} [y/n/e]: ')
             char = click.getchar()
 
-            if char.lower() in ('y', 'н', ):
+            if char.lower() in ('y', 'н',):
                 return True
-            elif char.lower() in ('n', 'т', ):
+            elif char.lower() in ('n', 'т',):
                 return False
             elif char.lower() in ('e', 'у'):
                 sys.exit(0)
 
-
-class LaunchMan:
-    @classmethod
-    def launch(cls, url):
+    @staticmethod
+    def launch(url):
         """
         Launch the default browser to follow the specified link.
 
@@ -55,13 +53,6 @@ class LaunchMan:
         :return: None;
         """
         click.launch(url)
-
-
-class InputMan:
-    @classmethod
-    def input(cls, title):
-        """Default input"""
-        return input(f'{title}: ')
 
     @classmethod
     def prompt(cls, title, hide_input=False):
@@ -74,12 +65,7 @@ class InputMan:
         """
         return click.prompt(title, hide_input=hide_input)
 
-
-class StatusMan:
-    printer = Printer()
-
-    @classmethod
-    def show_status(cls, status, show=True):
+    def show_status(self, status, show=True):
         """
         Status output.
 
@@ -89,15 +75,5 @@ class StatusMan:
         """
         msg = 'Ok!' if status else 'Error!'
         if show:
-            cls.printer.base.echo(msg)
+            self.printer.base.echo(msg)
         return msg
-
-
-class ClickMan:
-    """A versatile manager"""
-    printer = Printer()
-    input_man = InputMan()
-    status_man = StatusMan()
-    action_man = ActionMan()
-    launch_man = LaunchMan()
-    continue_man = ContinueMan()

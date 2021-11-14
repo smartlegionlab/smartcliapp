@@ -5,19 +5,15 @@
 # Copyright © 2018-2021, A.A Suvorov
 # All rights reserved.
 # --------------------------------------------------------
-from smartcliapp.managers import LaunchMan
-from smartcliapp.printers import Printer
+from smartprinter.printers import Printer
 
 
 class Informer:
     """
     Informer
-
     - Override the attributes to yours.
-
     """
     printer = Printer()
-    launcher = LaunchMan()
     name = ''
     title = ''
     description = ''
@@ -39,9 +35,3 @@ class Informer:
         cls.printer.smart.echo(cls.url, char=char)
         cls.printer.smart.echo(cls.copyright, char=char)
         cls.printer.smart.echo(char=char)
-
-    @classmethod
-    def launch(cls, url=None):
-        """Launches the default browser, navigates to your url from the console."""
-        site = url or cls.url
-        cls.launcher.launch(site)

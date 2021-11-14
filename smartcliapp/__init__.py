@@ -7,4 +7,6 @@
 # --------------------------------------------------------
 """Cross-platform library of tools for creating console
 applications, based on the click library."""
-__version__ = '0.2.0'
+from smartcliapp.climanager import CliManager
+from smartcliapp.informer import Informer
+__version__ = '0.3.0'
