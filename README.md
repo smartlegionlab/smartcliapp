@@ -46,9 +46,7 @@ Author and developer: ___A.A Suvorov___
 
 ___smartcliapp v0.3.0___
 
-- New opportunities.
-- Clearer description.
-- A more informative example.
+- Global code refactoring
 
 ## Warning!
 
