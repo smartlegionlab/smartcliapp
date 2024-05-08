@@ -1,0 +1,6 @@
+pytest
+pytest-cov
+tox
+build
+smartprinter~=0.1.1
+click~=8.0.1
