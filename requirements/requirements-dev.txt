@@ -2,5 +2,8 @@ pytest
 pytest-cov
 tox
 build
-smartprinter~=0.1.1
+smartprinter~=0.2.1
 click~=8.0.1
+setuptools
+wheel
+twine

@@ -17,7 +17,7 @@ ___smartcliapp___ - Cross-platform library of tools for creating console applica
 
 ***
 
-Author and developer: ___A.A Suvorov___
+Author and developer: ___A.A. Suvorov___
 
 [![smartlegiondev@gmail.com](https://img.shields.io/static/v1?label=email:&message=smartlegiondev@gmail.com&color=blue)](mailto:smartlegiondev@gmail.com)
 
@@ -33,7 +33,7 @@ Author and developer: ___A.A Suvorov___
 
 ## What's new?
 
-___smartcliapp v0.4.0___
+___smartcliapp v0.4.1___
 
 ## Warning!
 
@@ -114,6 +114,6 @@ class CliMan(Informer):
     --------------------------------------------------------
     Licensed under the terms of the BSD 3-Clause License
     (see LICENSE for details).
-    Copyright © 2018-2024, A.A Suvorov
+    Copyright © 2018-2024, A.A. Suvorov
     All rights reserved.
     --------------------------------------------------------
