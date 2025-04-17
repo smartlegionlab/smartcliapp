@@ -2,6 +2,7 @@
 
 ***
 
+[![PyPI Downloads](https://static.pepy.tech/badge/smartcliapp)](https://pepy.tech/projects/smartcliapp)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/smartlegionlab/smartcliapp)](https://github.com/smartlegionlab/smartcliapp/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/smartcliapp?label=pypi%20downloads)](https://pypi.org/project/smartcliapp/)
 ![GitHub top language](https://img.shields.io/github/languages/top/smartlegionlab/smartcliapp)
