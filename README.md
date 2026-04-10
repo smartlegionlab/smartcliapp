@@ -1,6 +1,9 @@
-# smartcliapp <sup>v0.4.2</sup>
+# smartcliapp <sup>v1.0.0</sup>
 
-***
+Cross-platform library of tools for creating console applications, based on the click library.
+Use a variety of out-of-the-box tools to create console applications.
+
+---
 
 [![PyPI Downloads](https://static.pepy.tech/badge/smartcliapp)](https://pepy.tech/projects/smartcliapp)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/smartlegionlab/smartcliapp)](https://github.com/smartlegionlab/smartcliapp/)
@@ -10,46 +13,13 @@
 [![GitHub](https://img.shields.io/github/license/smartlegionlab/smartcliapp)](https://github.com/smartlegionlab/smartcliapp/blob/master/LICENSE)
 [![PyPI - Format](https://img.shields.io/pypi/format/smartcliapp)](https://pypi.org/project/smartcliapp)
 
-***
-
-## Short Description:
-
-___smartcliapp___ - Cross-platform library of tools for creating console applications, based on the click library.
-
-***
-
-Author and developer: ___A.A. Suvorov___
-
-[![smartlegiondev@gmail.com](https://img.shields.io/static/v1?label=email:&message=smartlegiondev@gmail.com&color=blue)](mailto:smartlegiondev@gmail.com)
-
-***
+---
 
 ## Supported:
 
 - Linux: All.
 - Windows: 7/8/10.
 - Termux (Android).
-
-***
-
-## What's new?
-
-___smartcliapp v0.4.2___
-
-## Warning!
-
-The package is under active development, so new versions
-may not be compatible with the old ones.
-
-***
-
-## Description:
-
-___smartcliapp___ - Cross-platform library of tools for creating console applications, based on the click library.
-
-Use a variety of out-of-the-box tools to create console applications.
-
-Use [click](https://github.com/pallets/click) to develop console applications. 
 
 
 ### Possibilities:
@@ -69,7 +39,17 @@ Use [click](https://github.com/pallets/click) to develop console applications.
 - Use ClickMan as a toolbox (Printer, InputMan, StatusMan, ActionMan, Launcher).
 - Use Factory to create objects individually.
 
-***
+---
+
+## ⚠️ Disclaimer
+
+**By using this software, you agree to the full disclaimer terms.**
+
+**Summary:** Software provided "AS IS" without warranty. You assume all risks.
+
+**Full legal disclaimer:** See [DISCLAIMER.md](https://github.com/smartlegionlab/smartcliapp/blob/master/DISCLAIMER.md)
+
+---
 
 ## Help:
 
@@ -94,27 +74,13 @@ class CliMan(Informer):
 
 ```
 
-***
+---
 
-## Disclaimer of liability:
+## License
 
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**[BSD 3-Clause License](https://github.com/smartlegionlab/smartcliapp/blob/master/LICENSE)**
 
-***
+Copyright (©) 2026, [Alexander Suvorov](https://github.com/smartlegionlab)
 
-## Copyright:
-    --------------------------------------------------------
-    Licensed under the terms of the BSD 3-Clause License
-    (see LICENSE for details).
-    Copyright © 2018-2025, A.A. Suvorov
-    All rights reserved.
-    --------------------------------------------------------
+---
+

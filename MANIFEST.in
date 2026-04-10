@@ -6,4 +6,3 @@ include setup.cfg
 include setup.py
 global-exclude tests/*
 global-exclude data/*
-global-exclude requirements/*
